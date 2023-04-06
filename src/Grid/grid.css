@@ -1,0 +1,193 @@
+@media screen and (max-width:800px) {
+   :root {
+      --size_grid: 300px;
+      --size_btn: 100px;
+      --size_win: 250px;
+      --size_reset: 150px;
+      --font: 30px;
+      --btn_t: 50%;
+      --btn_b: 0%;
+      --top: 20vh;
+      --left: 11vw;
+      --btn_r_t: 4vh;
+      --btn_r_r: 30vw;
+
+   }
+}
+
+@media screen and (min-width:801px) {
+   :root {
+      --size_grid: 450px;
+      --size_btn: 150px;
+      --size_win: 350px;
+      --size_reset: 200px;
+      --font: 60px;
+      --btn_t: 50%;
+      --btn_b: 0%;
+      --top: 20vh;
+      --left: 30vw;
+      --btn_r_t: 4vh;
+      --btn_r_r: 42vw;
+      --btn_r: 20px;
+   }
+}
+
+#grid {
+   width: var(--size_grid);
+   height: var(--size_grid);
+   border-width: 10px;
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   object-fit: contain;
+   position: absolute;
+   top: var(--top);
+   left: var(--left);
+   z-index: 1;
+   border-color: rgb(186, 194, 201);
+   border-collapse: inherit;
+   color: cornsilk;
+}
+
+.btn {
+   width: var(--size_btn);
+   height: var(--size_btn);
+   margin: 0px;
+   padding: 0px;
+   cursor: grab;
+   font-size: 60px;
+   border-width: 15px;
+   font-weight: 800;
+   border-color: rgb(214, 156, 11);
+   z-index: 1;
+   color: rgb(6, 6, 6);
+   background-image: linear-gradient(grey, white);
+}
+
+.win {
+   font-family: 'Delicious Handrawn';
+   font-size: 20px;
+   width: var(--size_win);
+   height: var(--size_win);
+   font-size: var(--font);
+   size: fixed;
+   padding: 5% 5% 5% 5%;
+   position: absolute;
+   top: var(--top);
+   left: var(--left);
+   z-index: 2;
+   display: flex;
+   flex-direction: row;
+   border: solid;
+   border-color: rgb(230, 221, 221);
+   border-width: 20px;
+   border-radius: 10px;
+
+   background-image: linear-gradient(rgb(252, 252, 252), rgb(65, 9, 72), rgb(255, 255, 255));
+
+   color: rgb(0, 0, 0);
+
+}
+
+.play-btn {
+   color: rgb(20, 13, 14);
+   background-color: rgb(255, 174, 0);
+   width: var(--size_btn);
+   ;
+   font-style: italic;
+   font-size: 20px;
+   position: relative;
+   top: var(--btn_t);
+   left: var(--btn_b);
+   background-image: radial-gradient(rgb(243, 249, 249), rgb(46, 7, 52));
+   border-radius: 20px;
+   border-color: darkgoldenrod;
+   border-width: 5px;
+   font-family: 'Delicious Handrawn';
+}
+
+.reset {
+   color: rgb(23, 6, 9);
+   background-color: rgb(255, 174, 0);
+   width: var(--size_reset);
+   font-style: italic;
+   font-size: var(--btn_r);
+   position: absolute;
+   top: var(--btn_r_t);
+   left: var(--btn_r_r);
+   background-image: radial-gradient(rgb(255, 255, 255), rgb(3, 3, 1));
+   border-radius: 20px;
+   border-color: darkgoldenrod;
+   border-width: 5px;
+
+}
+
+@media screen and (min-width:801px) {
+   .player1_turn {
+      position: absolute;
+      top: 30%;
+      left: 10%;
+      font-style: italic;
+      width: 90px;
+      color: rgb(6, 6, 6);
+      background-image: linear-gradient(green, yellow);
+
+      border-bottom: solid;
+      border-width: 150px;
+      border-color: rgb(28, 27, 27);
+      font-family: 'Delicious Handrawn';
+      transition-property: background-image;
+      transition-duration: 5s;
+
+   }
+
+   .player2_turn {
+      position: absolute;
+      top: 30%;
+      left: 10%;
+      width: 90px;
+      color: rgb(0, 0, 0);
+      font-style: italic;
+      border-top: solid;
+      border-width: 150px;
+      border-color: rgb(28, 27, 27);
+
+      font-family: 'Delicious Handrawn';
+      background-image: linear-gradient(green, yellow);
+   }
+}
+
+@media screen and (max-width:800px) {
+   .player1_turn {
+      position: absolute;
+      bottom: 15vh;
+      left: 25vw;
+      font-style: italic;
+      width: 15vw;
+      border-right: solid;
+      border-width: 20vw;
+      color: rgb(6, 6, 6);
+      background-image: linear-gradient(green, yellow);
+
+      border-color: rgb(139, 134, 134);
+      font-family: 'Delicious Handrawn';
+      transition-property: background-image;
+      transition-duration: 5s;
+
+   }
+
+   .player2_turn {
+      position: absolute;
+      bottom: 15vh;
+      left: 25vw;
+      color: rgb(0, 0, 0);
+      font-style: italic;
+      width: 15vw;
+      border-left: solid;
+      border-width: 20vw;
+      border-color: rgb(139, 134, 134);
+
+      font-family: 'Delicious Handrawn';
+      background-image: linear-gradient(green, yellow);
+   }
+}
